@@ -74,7 +74,7 @@ export const actions = {
           }
           dispatch('notification/add', notification, { root: true })
         })
-    }
+      }
   }
 }
 export const getters = {
