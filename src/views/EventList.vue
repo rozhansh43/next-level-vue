@@ -37,6 +37,9 @@ export default {
     next()
    })
   },
+  beforeRouteUpdate(routeTo, routeFrom, next) {
+    
+  },
   computed: {
     hasNextPage() {
       return this.event.eventsTotal > this.page * this.perPage
