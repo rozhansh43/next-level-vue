@@ -24,18 +24,19 @@
     </ul>
   </div>
 </template>
-<script>
-import { mapState } from 'vuex'
-import NProgress from 'nprogress'
-import store from '@/store/store'
 
+<script>
 export default {
-  props: ['id'],
-  computed: mapState({
-    event: state => state.event.event
-  }),
+  props: {
+    event: {
+      type: Object,
+      required: true
+    }
+  },
+
 }
 </script>
+
 <style scoped>
 .location {
   margin-bottom: 0;
