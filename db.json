@@ -231,6 +231,24 @@
       "date": "",
       "time": "5:00",
       "attendees": []
+    },
+    {
+      "id": 8474389,
+      "user": {
+        "id": "abc123",
+        "name": "Adam"
+      },
+      "category": "sustainability",
+      "organizer": {
+        "id": "abc123",
+        "name": "Adam"
+      },
+      "title": "rozhan",
+      "description": "",
+      "location": "",
+      "date": "2021-07-14T11:01:00.000Z",
+      "time": "22:00",
+      "attendees": []
     }
   ]
 }
