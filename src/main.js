@@ -8,7 +8,16 @@ import BaseIcon from '@/components/BaseIcon'
 import'nprogress/nprogress.css'
 import Vuelidate from 'vuelidate'
 
+Vue.use(Vuelidate)
+
+Vue.mixin({
+ mounted() {
+   console.log('mixed into every component')
+ }
+})
+
 Vue.component('BaseIcon', BaseIcon)
+
 
 Vue.config.productionTip = false
 
