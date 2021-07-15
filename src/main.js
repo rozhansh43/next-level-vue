@@ -10,11 +10,6 @@ import Vuelidate from 'vuelidate'
 
 Vue.use(Vuelidate)
 
-Vue.mixin({
- mounted() {
-   console.log('mixed into every component')
- }
-})
 
 Vue.component('BaseIcon', BaseIcon)
 
