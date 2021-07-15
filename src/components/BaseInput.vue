@@ -3,7 +3,7 @@
     <label v-if="label">
       {{ label }}
     </label>
-    <input type="text" placeholder="Add an event" @input="updateValue">
+    <input :value="value" @input="updateValue">
   </div>
 </template>
 
@@ -15,6 +15,7 @@ export default {
       default: ''
     }
   },
+  value: [String, Number],
   methods: {
     updateValue(event) {
       this.$emit('input', event.target.value)

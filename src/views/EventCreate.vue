@@ -8,8 +8,8 @@
       </select>
 
       <h3>Name describe your event</h3>
-      
-      <BaseInput label="Title" v-model="event.title"/>
+
+      <!-- <BaseInput label="Title" v-model="event.title" type="text" v-bind="$attrs" class="field" placeholder="Location"/> -->
 
       <div class="field">
         <label>
@@ -36,7 +36,7 @@
           Location
         </label>
 
-        <input v-model="event.location" type="text" placeholder="Add a location"/>
+        <input v-model="event.location" type="text" placeholder="Add a location" v-bind="$attrs" class="field"/>
       </div>
 
       <h3>
@@ -74,6 +74,7 @@ import Datepicker from 'vuejs-datepicker'
 import NProgress from 'nprogress'
 
 export default {
+  inheritAttrs :false,
   components: {
     Datepicker
   },
