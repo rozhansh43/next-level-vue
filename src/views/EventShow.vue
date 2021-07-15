@@ -7,30 +7,16 @@
       <h5>Category: {{ event.category }}</h5>
     </div>
 
-    <BaseIcon name="map">
-      <h2>
-        Location
-      </h2>
-    </BaseIcon>
+    <BaseIcon name="map"><h2>Location</h2></BaseIcon>
 
-    <address>
-      {{ event.location }}
-    </address>
+    <address>{{ event.location }}</address>
 
-    <h2>
-      Event details
-    </h2>
-
-    <p>
-      {{ event.description }}
-    </p>
+    <h2>Event details</h2>
+    <p>{{ event.description }}</p>
 
     <h2>Attendees
-      <span class="badge -fill-gradient">
-        {{ event.attendees ? event.attendees.length : 0 }}
-      </span>
+      <span class="badge -fill-gradient">{{ event.attendees ? event.attendees.length : 0 }}</span>
     </h2>
-    
     <ul class="list-group">
       <li v-for="(attendee, index) in event.attendees" :key="index" class="list-item">
         <b>{{ attendee.name }}</b>
@@ -38,7 +24,6 @@
     </ul>
   </div>
 </template>
-
 <script>
 export default {
   props: {
@@ -46,11 +31,9 @@ export default {
       type: Object,
       required: true
     }
-  },
-
+  }
 }
 </script>
-
 <style scoped>
 .location {
   margin-bottom: 0;

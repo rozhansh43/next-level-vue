@@ -1,19 +1,15 @@
 <template>
-  <div>
-    <h3>
-      {{ resource }} Not Found
-    </h3>
-    <router-link :to="{ name: 'event-list'}">
-      Back to home page
-    </router-link>
-  </div>
+    <div>
+        <h1>Oops!</h1>
+        <h3>The {{ resource }} you're looking for is not here.</h3>
+        <router-link :to="{ name: 'event-list' }">Back to the home page</router-link>
+    </div>
 </template>
-
 <script>
 export default {
-  prop: {
+  props: {
     resource: {
-      Type: String,
+      type: String,
       required: true
     }
   }
