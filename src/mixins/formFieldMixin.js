@@ -5,7 +5,7 @@ export const formFieldMixin = {
       type: String,
       default: ''
     },
-    value: [ String, Number]
+    value: [String, Number]
   },
   methods: {
     updateValue(event) {
