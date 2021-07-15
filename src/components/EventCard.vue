@@ -2,7 +2,7 @@
   <router-link class="event-link" :to="{ name: 'event-show', params: { id: event.id } }">
     <div class="event-card -shadow">
       <span class="eyebrow">
-        @{{ event.time }} on {{ event.date }}
+        @{{ event.time }} on {{ event.date | date }}
       </span>
 
       <h4 class="title">
