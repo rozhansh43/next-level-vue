@@ -4,7 +4,10 @@
     <form @submit.prevent="createEvent">
       <BaseSelect label="Select a category" :options="categories" v-model="event.category"/>
 
-      <h3>Name & describe your event</h3>
+      <h3>
+        Name describe your event
+      </h3>
+      
       <BaseInput label="Title" v-model="event.title" type="text" placeholder="Title" class="field"/>
 
       <BaseInput
@@ -15,7 +18,10 @@
         class="field"
       />
 
-      <h3>Where is your event?</h3>
+      <h3>
+        Where is your event?
+      </h3>
+
       <BaseInput
         label="Location"
         v-model="event.location"
@@ -24,16 +30,23 @@
         class="field"
       />
 
-      <h3>When is your event?</h3>
+      <h3>
+        When is your event?
+      </h3>
 
       <div class="field">
-        <label>Date</label>
+        <label>
+          Date
+        </label>
+
         <datepicker v-model="event.date" placeholder="Select a date"/>
       </div>
 
       <BaseSelect label="Select a time" :options="times" v-model="event.time" class="field"/>
 
-      <BaseButton type="submit" buttonClass="-fill-gradient">Submit</BaseButton>
+      <BaseButton type="submit" buttonClass="-fill-gradient">
+        Submit
+      </BaseButton>
     </form>
   </div>
 </template>
