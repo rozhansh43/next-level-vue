@@ -34,8 +34,3 @@ export default {
 }
 </script>
 
-<style scoped>
-.notification-bar {
-  margin: 1em 0 1em;
-}
-</style>

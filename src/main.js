@@ -8,6 +8,9 @@ import 'nprogress/nprogress.css'
 import Vuelidate from 'vuelidate'
 import DateFilter from './filters/date'
 
+
+import '@/assets/styles/style.css'
+
 Vue.filter('date', DateFilter)
 
 Vue.use(Vuelidate)
