@@ -1,8 +1,11 @@
 <template>
   <div>
-    <h1>Create an Event</h1>
+    <h1>
+      Create an Event
+    </h1>
+
     <form @submit.prevent="createEvent">
-      <BaseSelect
+      <base-select
         label="Select a category"
         :options="categories"
         v-model="event.category"
@@ -10,11 +13,16 @@
         @blur="$v.event.category.$touch()"
       />
       <template v-if="$v.event.category.$error">
-        <p v-if="!$v.event.category.required" class="errorMessage">Category is required.</p>
+        <p v-if="!$v.event.category.required" class="errorMessage">
+          Category is required.
+        </p>
       </template>
 
-      <h3>Name & describe your event</h3>
-      <BaseInput
+      <h3>
+        Name describe your event
+      </h3>
+
+      <base-input
         label="Title"
         v-model="event.title"
         type="text"
@@ -25,10 +33,12 @@
       />
 
       <template v-if="$v.event.title.$error">
-        <p v-if="!$v.event.title.required" class="errorMessage">Title is required.</p>
+        <p v-if="!$v.event.title.required" class="errorMessage">
+          Title is required.
+        </p>
       </template>
 
-      <BaseInput
+      <base-input
         label="Description"
         v-model="event.description"
         type="text"
@@ -39,11 +49,15 @@
       />
 
       <template v-if="$v.event.description.$error">
-        <p v-if="!$v.event.description.required" class="errorMessage">Description is required.</p>
+        <p v-if="!$v.event.description.required" class="errorMessage">
+          Description is required.
+        </p>
       </template>
 
-      <h3>Where is your event?</h3>
-      <BaseInput
+      <h3>
+        Where is your event?
+      </h3>
+      <base-input
         label="Location"
         v-model="event.location"
         type="text"
@@ -54,13 +68,19 @@
       />
 
       <template v-if="$v.event.location.$error">
-        <p v-if="!$v.event.location.required" class="errorMessage">Location is required.</p>
+        <p v-if="!$v.event.location.required" class="errorMessage">
+          Location is required.
+        </p>
       </template>
 
-      <h3>When is your event?</h3>
+      <h3>
+        When is your event?
+      </h3>
 
       <div class="field">
-        <label>Date</label>
+        <label>
+          Date
+        </label>
         <datepicker
           v-model="event.date"
           placeholder="Select a date"
@@ -70,10 +90,12 @@
       </div>
 
       <template v-if="$v.event.date.$error">
-        <p v-if="!$v.event.date.required" class="errorMessage">Date is required.</p>
+        <p v-if="!$v.event.date.required" class="errorMessage">
+          Date is required.
+        </p>
       </template>
 
-      <BaseSelect
+      <base-select
         label="Select a time"
         :options="times"
         v-model="event.time"
@@ -83,11 +105,17 @@
       />
 
       <template v-if="$v.event.time.$error">
-        <p v-if="!$v.event.time.required" class="errorMessage">Time is required.</p>
+        <p v-if="!$v.event.time.required" class="errorMessage">
+          Time is required.
+        </p>
       </template>
 
-      <BaseButton type="submit" buttonClass="-fill-gradient" :disabled="$v.$anyError">Submit</BaseButton>
-      <p v-if="$v.$anyError" class="errorMessage">Please fill out the required field(s).</p>
+      <base-button type="submit" buttonClass="-fill-gradient" :disabled="$v.$anyError">
+        Submit
+      </base-button>
+      <p v-if="$v.$anyError" class="errorMessage">
+        Please fill out the required field(s).
+      </p>
     </form>
   </div>
 </template>
